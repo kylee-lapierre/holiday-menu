@@ -49,9 +49,9 @@ class Holiday:
 # ------------------------------------------
 # HolidayList class, added get HTML and JSON
 # ------------------------------------------
+@dataclass
 class HolidayList:
-    def __init__(self):
-       self.innerHolidays = []
+    innerHolidays = []
     
     def addHoliday(HolidayName, HolidayDate):
         dateAdded = 'n'
@@ -115,6 +115,7 @@ class HolidayList:
         return innerHolidays
 
     def save_to_json(filelocation):
+        global innerHolidays
         jsonList = []
         for i in innerHolidays:
             if i not in jsonList:
@@ -204,7 +205,7 @@ class HolidayList:
 
 def main():
     global innerHolidays
-    innerHolidays = HolidayList().innerHolidays
+    innerHolidays = HolidayList.innerHolidays
     HolidayList.read_json("pre-loaded-holidays.json")
     HolidayList.scrapeHolidays()
     startUp()
@@ -283,3 +284,4 @@ def main():
 
 if __name__ == "__main__":
     main();
+
