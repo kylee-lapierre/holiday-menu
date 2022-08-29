@@ -3,6 +3,15 @@
 Use this code to see the dates for holidays from January 1, 2020 to December 31, 2024! 
 The main file with all the code is within HolidayMenu.py and the given holidays are within pre-loaded-holidays.json. 
 
+## Modules and Python Version
+* Modules:
+   * imported dataclass from dataclasses
+   * imported date and datetime from datetime
+   * imported BeautifulSoup from bs4
+   * imported json
+   * imported requests
+* Python version: 3.9.12
+
 ## Features 
 * Presents the user with a list of holidays that are added then shows a menu for adding or removing a holiday, viewing holidays, saving the holiday list, and then exiting the menu.
     * When adding or removing, it requires the holiday name and date.
